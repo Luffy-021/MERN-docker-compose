@@ -5,9 +5,7 @@ import records from "./routes/record.js";
 const PORT = process.env.PORT || 5050;
 const app = express();
 
-app.use(cors({
-  origin: 'mern-docker-compose-bb4l.vercel.app'  // Replace with your actual frontend URL
-}));
+app.use(cors());
 app.use(express.json());
 app.use("/record", records);
 app.get('/', (req, res) => {
